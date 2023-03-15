@@ -1,5 +1,5 @@
 org: ops360-systems
-workspaces:"tfe-workspace"
+workspaces:
 - name: "tfe-workspace"
   description: "Dev workspace for dhruv dev"
   tags: ["aws", "eks", "dev"]
