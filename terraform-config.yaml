@@ -1,6 +1,6 @@
 org: ops360-systems
 workspaces:
-- name: "tfe-workspace"
+- name: "manager"
   description: "Dev workspace for dhruv dev"
   tags: ["aws", "eks", "dev"]
 teams:
@@ -12,10 +12,10 @@ teams:
   users: ["user4"]
 permissions:
 - team: "Platform-TGD-Employees-Access"
-  workspace: "tfe-workspace"
+  workspace: "manager"
   access: "admin"
 - team: "Platform-TGD-Employees-Permission"
-  workspace: "tfe-workspace"
+  workspace: "manager"
   permissions:
     runs: apply
     variables: read
