@@ -1,0 +1,25 @@
+org: ops360-systems
+workspaces:
+- name: "dhruv-dev"
+  description: "Dev workspace for dhruv dev"
+  tags: ["aws", "eks", "dev"]
+teams:
+- name: "Platform-TGD-Employees-Access"
+  tags: ["dev"]
+  users: ["user1", "user2", "user3"]
+- name: "Platform-TGD-Employees-Permission"
+  tags: ["ops"]
+  users: ["user4"]
+permissions:
+- team: "Platform-TGD-Employees-Access"
+  workspace: "dhruv-dev"
+  access: "admin"
+- team: "Platform-TGD-Employees-Permission"
+  workspace: "dhruv-dev"
+  permissions:
+    runs: apply
+    variables: read
+    state_versions: read-outputs
+    sentinel_mocks: none
+    workspace_locking: false
+    run_tasks: true
